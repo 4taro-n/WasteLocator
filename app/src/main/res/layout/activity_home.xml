@@ -11,7 +11,44 @@
         android:id="@+id/btnGoToNearlyBin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Nearly Bin Activity"
+        android:text="Nearly Bins"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/btnGoToNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/btnGoToEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnGoToFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/btnGoToContactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnGoToDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DashBoard"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"/>
 </LinearLayout>
