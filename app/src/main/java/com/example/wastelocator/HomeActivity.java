@@ -66,8 +66,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setViewIds() {
-        btnGoToNearlyBin = findViewById(R.id.btnGoToNearlyBin);
-        btnGoToNotification = findViewById(R.id.btnGoToNotification);
+        btnGoToNearlyBin = findViewById(R.id.btnNearbyBin);
+        btnGoToNotification = findViewById(R.id.btnNotifications);
         btnGoToEvents = findViewById(R.id.btnGoToEvents);
         btnGoToFeedback = findViewById(R.id.btnGoToFeedback);
         btnGoToContactUs = findViewById(R.id.btnGoToContactUs);

@@ -1,54 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".HomeActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/btnGoToNearlyBin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nearly Bins"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
-    <Button
-        android:id="@+id/btnGoToNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notification"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
-    <Button
-        android:id="@+id/btnGoToEvents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Events"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <Button
+                android:id="@+id/btnNearbyBin"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Nearby Bins"
+                android:drawableTop="@drawable/bin_map"/>
+            <Button
+                android:id="@+id/btnNotifications"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:drawableTop="@drawable/baseline_notifications_active_24"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/btnGoToFeedback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Feedback"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
-    <Button
-        android:id="@+id/btnGoToContactUs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Us"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <Button
+                android:id="@+id/btnGoToEvents"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/baseline_event_available_24"
+                android:text="Events" />
 
-    <Button
-        android:id="@+id/btnGoToDashboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DashBoard"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"/>
-</LinearLayout>
+            <Button
+                android:id="@+id/btnGoToFeedback"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:drawableTop="@drawable/baseline_feedback_24"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <Button
+                android:id="@+id/btnGoToContactUs"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:drawableTop="@drawable/baseline_contact_phone_24"/>
+
+            <Button
+                android:id="@+id/btnGoToDashboard"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="DashBoard"
+                android:layout_marginStart="16dp"
+                android:drawableTop="@drawable/dashboard"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
