@@ -38,7 +38,7 @@
             android:name=".FeedbackActivity"
             android:exported="false" />
         <activity
-            android:name=".EventsActivity"
+            android:name=".EventsListActivity"
             android:exported="false" />
         <activity
             android:name=".NotificationActivity"

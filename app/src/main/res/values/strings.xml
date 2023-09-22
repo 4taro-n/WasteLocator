@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WasteLocator</string>
+    <string name="brisbane_phone_num_info">Our Contact Centre is open 24 hours a day, seven days a week on 07 3403 8888.\n\nWe aim to answer your call within 20 seconds. This is the best contact method for urgent issues, such as traffic light problems, lost animals, dangerous dogs, lost property and public safety concerns.</string>
 </resources>

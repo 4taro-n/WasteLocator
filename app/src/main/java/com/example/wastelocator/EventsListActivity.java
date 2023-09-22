@@ -7,18 +7,20 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class ContactUsActivity extends AppCompatActivity {
+public class EventsListActivity extends AppCompatActivity {
+    ArrayList<Event> eventArrayList;
+    RecyclerView recyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.activity_events_list);
     }
 
-    public static class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
+    // Display event list
+    private void initialising() {
 
-        ArrayList<>
-        public class EventViewHolder {
-        }
     }
 }

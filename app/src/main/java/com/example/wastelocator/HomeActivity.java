@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
         btnGoToEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, EventsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, EventsListActivity.class);
                 startActivity(intent);
             }
         });
