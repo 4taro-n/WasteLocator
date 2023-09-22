@@ -7,20 +7,61 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import android.widget.Toast;
+import android.content.Intent;
+
 
 public class NotificationActivity extends AppCompatActivity {
-    private TextView notificationTitleTextView;
+    private RecyclerView recyclerView;
+    private ReportAdapter reportAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-    }
 
-    private void setViewIds() {
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        ArrayList<Report> reportList = generateDummyData();
+
+        reportAdapter = new ReportAdapter(reportList);
+        recyclerView.setAdapter(reportAdapter);
+
+        reportAdapter.setOnItemClickListener(position -> {
+            // Handle recyclerview item click here
+            // For example, you can open a new activity
+            Toast.makeText(NotificationActivity.this, reportList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+
+            //get report object when user clicked the item
+            Report clickedReport = reportList.get(position);
+
+            Intent intent = new Intent(NotificationActivity.this, HomeActivity.class);
+
+//            intent.putExtra("reportTitle", clickedReport.getTitle());
+//            intent.putExtra("reportDescription", clickedReport.getDescription());
+
+            startActivity(intent);
+        });
     }
 
     // Replace this method with your actual vehicle data
+    private ArrayList<Report> generateDummyData() {
+        ArrayList<Report> reportList = new ArrayList<>();
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
+        reportList.add(new Report("Bin Location Accuracy", "test"));
 
+
+        // Add more vehicles as needed
+        return reportList;
+    }
 }
