@@ -14,11 +14,4 @@ public class ContactUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
     }
-
-    public static class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
-
-        ArrayList<>
-        public class EventViewHolder {
-        }
-    }
 }
