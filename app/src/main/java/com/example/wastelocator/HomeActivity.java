@@ -57,6 +57,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnGoToDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
 
         if(SharedPrefManager.isAdmin()) {
             btnGoToDashboard.setVisibility(View.VISIBLE);
@@ -64,6 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             btnGoToDashboard.setVisibility(View.GONE);
         }
     }
+
 
     private void setViewIds() {
         btnGoToNearlyBin = findViewById(R.id.btnNearbyBin);
