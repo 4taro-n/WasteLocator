@@ -74,8 +74,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="16dp"
-            android:padding="16dp">
+            android:layout_marginTop="16dp">
             <Button
                 android:id="@+id/btn_volunteers"
                 android:layout_width="wrap_content"
@@ -88,11 +87,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:text="Edit"/>
+
             <Button
                 android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
+                android:paddingStart="8dp"
                 android:layout_height="wrap_content"
-                android:text="Delete"/>
+                android:drawableLeft="@drawable/ic_delete_icon"
+                android:backgroundTint="@color/warning_color"
+                android:text="delete"/>
         </LinearLayout>
 
         <RelativeLayout
@@ -106,6 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginEnd="16dp"
+                android:paddingStart="8dp"
+                android:drawableLeft="@drawable/ic_person_add_icon"
                 android:text="Join"/>
 
             <Button
@@ -114,6 +119,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/btn_join"
                 android:layout_marginEnd="16dp"
+                android:paddingStart="8dp"
+                android:drawableLeft="@drawable/ic_feedback_small_icon"
                 android:text="Feedback"/>
         </RelativeLayout>
 

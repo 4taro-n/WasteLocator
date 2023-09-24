@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/empty_volunteer_state"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volunteers"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:paddingBottom="16dp"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="No volunteers have signed up yet"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_volunteer_state"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_volunteerList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-
-</LinearLayout>
+</RelativeLayout>

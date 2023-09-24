@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EventListActivity"
-    android:layout_margin="16dp"
-    android:orientation="vertical">
+    android:layout_margin="16dp">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Events"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:paddingBottom="16dp"/>
-
-
-    <Button
-        android:id="@+id/add_event_btn"
+    <LinearLayout
+        android:id="@+id/empty_event_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Event"
-        android:layout_marginBottom="16dp"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="New event coming soon!\nStay tuned!"
+            android:textSize="25sp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_state_image"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_eventList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/add_event_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="17.5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Add event"
+        android:drawableLeft="@drawable/ic_add_icon"/>
 
 
-</LinearLayout>
+</RelativeLayout>

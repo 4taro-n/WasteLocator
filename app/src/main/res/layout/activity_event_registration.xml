@@ -12,24 +12,32 @@
         android:text="Event name"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:paddingBottom="20dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <EditText
         android:id="@+id/event_registration_userName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:layout_height="50dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/custom_input"
+        android:hint="Name" />
 
     <EditText
         android:id="@+id/event_registration_userEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/custom_input"
+        android:layout_marginTop="16dp"
         android:hint="Email"/>
 
     <EditText
         android:id="@+id/event_registration_userPhoneNum"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/custom_input"
+        android:layout_marginTop="16dp"
         android:hint="Mobile number"/>
 
     <RelativeLayout

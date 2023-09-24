@@ -27,6 +27,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeParseException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -109,9 +110,11 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private void submitEvent() {
+        LocalDate date;
+        LocalTime time;
         // Extract date from the TextViews
-        LocalDate date = LocalDate.parse(eventDate.getText().toString());
-        LocalTime time = LocalTime.parse(eventTime.getText().toString());
+        String dateString = eventDate.getText().toString();
+        String timeString = eventTime.getText().toString();
         String name = eventName.getText().toString();
         String location = eventLocation.getText().toString();
         String description = eventDescription.getText().toString();
@@ -119,10 +122,13 @@ public class NewEventActivity extends AppCompatActivity {
 
         // Validation
         if (name.isEmpty() || location.isEmpty() || description.isEmpty() ||
-                date.equals("date")|| time.equals("time")) {
+                dateString.equals("date")|| timeString.equals("time")) {
             Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        date = LocalDate.parse(dateString);
+        time = LocalTime.parse(timeString);
 
         if (isEditMode) {
             // Update the eventToEdit properties

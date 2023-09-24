@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,8 @@ public class EventListActivity extends AppCompatActivity {
     ArrayList<Event> eventArrayList;
     private RecyclerView recyclerView;
     private EventAdapter eventAdapter;
-    private Button  addEvent;
+    private Button addEvent;
+    private LinearLayout emptyStateImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +88,12 @@ public class EventListActivity extends AppCompatActivity {
             eventArrayList.clear();
 
             if (events != null && !events.isEmpty()) {
+                emptyStateImage.setVisibility(View.GONE);
                 eventArrayList.addAll(events);
                 eventAdapter.notifyDataSetChanged();
             } else {
                 Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+                emptyStateImage.setVisibility(View.VISIBLE);
                 eventAdapter.notifyDataSetChanged();
             }
         });
@@ -106,6 +110,7 @@ public class EventListActivity extends AppCompatActivity {
     private void viewBinding() {
         recyclerView = findViewById(R.id.recyclerView_eventList);
         addEvent = findViewById(R.id.add_event_btn);
+        emptyStateImage = findViewById(R.id.empty_event_state);
     }
 
 }

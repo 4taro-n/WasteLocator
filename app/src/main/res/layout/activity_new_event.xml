@@ -8,12 +8,13 @@
         android:id="@+id/add_event_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/baseline_image_24"/>
+        android:src="@drawable/baseline_image_24"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
         <Button
             android:id="@+id/add_event_image_btn"
             android:layout_width="wrap_content"
@@ -25,14 +26,17 @@
     <EditText
         android:id="@+id/add_event_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:hint="Title"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:gravity="center">
         <TextView
@@ -63,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
+        android:layout_marginTop="10dp"
         android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
@@ -94,21 +98,28 @@
     <EditText
         android:id="@+id/add_event_location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/custom_input"
         android:hint="Location"/>
 
     <EditText
         android:id="@+id/add_event_description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:hint="Description"/>
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_input"
+        android:paddingHorizontal="15dp"
+        android:hint="Description"
+        android:paddingTop="8dp"
+        android:gravity="top"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp">
+        android:layout_marginTop="16dp">
         <Button
             android:id="@+id/submit_event_btn"
             android:layout_width="wrap_content"

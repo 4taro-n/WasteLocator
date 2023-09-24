@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:gravity="center_vertical"
-        android:text="Waste Locator"
+        android:text="WasteWarrior"
         android:textColor="#03A9F4"
         android:textSize="36dp"
         android:textStyle="bold|italic" />
