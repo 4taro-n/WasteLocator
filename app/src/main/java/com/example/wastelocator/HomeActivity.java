@@ -1,9 +1,9 @@
 package com.example.wastelocator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
 
@@ -12,7 +12,9 @@ import com.example.wastelocator.Utils.SharedPrefManager;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button btnGoToNearlyBin, btnGoToNotification, btnGoToEvents,btnGoToFeedback,btnGoToContactUs, btnGoToDashboard;
+    //private Button btnGoToContactUs, btnGoToDashboard;
+    private CardView nearbyBinsCard, notificationsCard, eventsCard;
+    private CardView feedbackCard, contactUsCard, dashboardCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,36 +23,36 @@ public class HomeActivity extends AppCompatActivity {
 
         setViewIds();
 
-        btnGoToNearlyBin.setOnClickListener(new View.OnClickListener() {
+        nearbyBinsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, NearlyBinActivity.class);
+                Intent intent = new Intent(HomeActivity.this, NearByBinActivity.class);
                 startActivity(intent);
             }
         });
 
-        btnGoToNotification.setOnClickListener(new View.OnClickListener() {
+        notificationsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, NotificationActivity.class);
                 startActivity(intent);
             }
         });
-        btnGoToEvents.setOnClickListener(new View.OnClickListener() {
+        eventsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, EventsListActivity.class);
+                Intent intent = new Intent(HomeActivity.this, EventListActivity.class);
                 startActivity(intent);
             }
         });
-        btnGoToFeedback.setOnClickListener(new View.OnClickListener() {
+        feedbackCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, FeedbackActivity.class);
                 startActivity(intent);
             }
         });
-        btnGoToContactUs.setOnClickListener(new View.OnClickListener() {
+        contactUsCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ContactUsActivity.class);
@@ -65,20 +67,28 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        dashboardCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
+
         if(SharedPrefManager.isAdmin()) {
-            btnGoToDashboard.setVisibility(View.VISIBLE);
+            dashboardCard.setVisibility(View.VISIBLE);
         } else {
-            btnGoToDashboard.setVisibility(View.GONE);
+            dashboardCard.setVisibility(View.GONE);
         }
     }
 
 
     private void setViewIds() {
-        btnGoToNearlyBin = findViewById(R.id.btnNearbyBin);
-        btnGoToNotification = findViewById(R.id.btnNotifications);
-        btnGoToEvents = findViewById(R.id.btnGoToEvents);
-        btnGoToFeedback = findViewById(R.id.btnGoToFeedback);
-        btnGoToContactUs = findViewById(R.id.btnGoToContactUs);
-        btnGoToDashboard = findViewById(R.id.btnGoToDashboard);
+        nearbyBinsCard = findViewById(R.id.nearby_bins_card);
+        notificationsCard = findViewById(R.id.notifications_card);
+        eventsCard = findViewById(R.id.events_card);
+        feedbackCard = findViewById(R.id.feedback_card);
+        contactUsCard = findViewById(R.id.contact_us_card);
+        dashboardCard = findViewById(R.id.dashboard_card);
     }
 }

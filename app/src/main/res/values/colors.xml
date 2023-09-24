@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    // Customised Colors
+    <color name="dark_green_primary">#1b5e20</color> //900
+    <color name="Light_green_primary">#B2DFDB</color>
+    <color name="primary_green">#388e3c</color> //700
+    <color name="accent_green">#4daf4e</color> //500
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider_color">#BDBDBD</color>
 </resources>

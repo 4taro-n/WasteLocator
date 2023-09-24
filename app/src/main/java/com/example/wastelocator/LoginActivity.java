@@ -27,22 +27,20 @@ public class LoginActivity extends AppCompatActivity {
             String email = emailEditText.getText().toString();
             String password = passwordEditText.getText().toString();
 
-            // Perform login authentication logic here
+            // Login authentication
             if (isValidCredentials(email, password)) {
-                // Successful login, navigate to next activity
                 Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
 
                 SharedPrefManager.setLoginState(true);
-                if (email.equals("admin@gmail")){
+                if (email.equals("admin@gmail.com")){
                     SharedPrefManager.setAdmin(true);
-                }else {
+                } else {
                     SharedPrefManager.setAdmin(false);
                 }
                 Intent intent = new Intent(this, HomeActivity.class);
                 startActivity(intent);
 
             } else {
-                // Invalid credentials, show error message
                 Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                 emailEditText.setError("Invalid email");
                 passwordEditText.setError("Invalid password");            }
@@ -58,6 +56,6 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isValidCredentials(String email, String password) {
         // Perform validation logic here
         // Return true if credentials are valid, false otherwise
-        return (email.equals("admin@gmail") && password.equals("admin123")) || (email.equals("user@gmail") && password.equals("user123"));
+        return (email.equals("admin@gmail.com") && password.equals("admin123")) || (email.equals("user@gmail.com") && password.equals("user123"));
     }
 }

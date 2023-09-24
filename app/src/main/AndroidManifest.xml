@@ -44,17 +44,38 @@
             android:name=".FeedbackActivity"
             android:exported="false" />
         <activity
-            android:name=".EventsListActivity"
+            android:name=".EventListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VolunteerListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventFeedbackActivity"
             android:exported="false" />
         <activity
             android:name=".NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".NearlyBinActivity"
+            android:name=".NearByBinActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

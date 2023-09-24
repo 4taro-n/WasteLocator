@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Brisbane City Council"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:paddingTop="8dp"/>
         </LinearLayout>
@@ -45,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/brisbane_phone_num_info"
+                android:textSize="18sp"
                 android:paddingTop="8dp"/>
         </LinearLayout>
 
