@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        dashboardCard.setOnClickListener(new View.OnClickListener() {
+        btnGoToDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
