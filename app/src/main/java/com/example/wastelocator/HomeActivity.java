@@ -8,11 +8,12 @@ import android.view.View;
 import android.content.Intent;
 
 import com.example.wastelocator.Utils.SharedPrefManager;
+import android.widget.Button;
 
 
 public class HomeActivity extends AppCompatActivity {
 
-    //private Button btnGoToContactUs, btnGoToDashboard;
+//    private Button btnGoToContactUs, btnGoToDashboard;
     private CardView nearbyBinsCard, notificationsCard, eventsCard;
     private CardView feedbackCard, contactUsCard, dashboardCard;
 
@@ -59,13 +60,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        dashboardCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btnGoToDashboard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         dashboardCard.setOnClickListener(new View.OnClickListener() {
             @Override

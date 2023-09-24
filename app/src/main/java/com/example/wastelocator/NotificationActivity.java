@@ -38,10 +38,10 @@ public class NotificationActivity extends AppCompatActivity {
             //get report object when user clicked the item
             Report clickedReport = reportList.get(position);
 
-            Intent intent = new Intent(NotificationActivity.this, HomeActivity.class);
+            Intent intent = new Intent(NotificationActivity.this, NotificationDetailActivity.class);
 
-//            intent.putExtra("reportTitle", clickedReport.getTitle());
-//            intent.putExtra("reportDescription", clickedReport.getDescription());
+            intent.putExtra("reportTitle", clickedReport.getTitle());
+            intent.putExtra("reportDescription", clickedReport.getDescription());
 
             startActivity(intent);
         });

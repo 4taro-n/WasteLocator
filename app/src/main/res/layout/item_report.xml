@@ -23,8 +23,8 @@
                 android:id="@+id/reportTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vehicle Name"
-                android:textSize="18sp"
+                android:text="Report Title"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 />
 
@@ -32,7 +32,7 @@
                 android:id="@+id/reportDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vehicle Name"
+                android:text="Report Description"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />
