@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -46,9 +47,11 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.11.0") //  load the image from its Uri into the ImageView.
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
+    //googlemap
+    implementation("com.google.android.gms:play-services-maps:18.1.0");
+
     // Testing
 
-    implementation("com.google.android.gms:play-services-maps:18.1.0");
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
