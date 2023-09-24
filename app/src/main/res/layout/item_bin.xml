@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- item_vehicle.xml -->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,54 +6,58 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp">
 
+        <!-- ImageView for the icon -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_delete_24"
+            android:contentDescription="bin image" />
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:paddingStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/binId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vehicle Name"
+                android:text="binid"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                />
+                android:layout_marginRight="30dp"/>
 
             <TextView
                 android:id="@+id/binVolume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vehicle Name"
+                android:text="binvolume"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
-
-<!--            <TextView-->
-<!--                android:id="@+id/binLatitude"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Vehicle Name"-->
-<!--                android:textSize="18sp"-->
-<!--                android:textStyle="bold"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/binLongitude"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Vehicle Name"-->
-<!--                android:textSize="18sp"-->
-<!--                android:textStyle="bold"-->
-<!--                />-->
-
+                android:textStyle="bold" />
         </LinearLayout>
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_arrow_right_24"
+            android:contentDescription="bin image" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
