@@ -14,6 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarData;
+
 
 public class DashboardActivity extends AppCompatActivity {
     private TextView ReportTextView;
@@ -24,12 +29,21 @@ public class DashboardActivity extends AppCompatActivity {
 
     private BinAdapter binAdapter;
 
+    //chart
+
+    private BarChart barChart;
+    private ArrayList<BarEntry> entries;
+    private BarDataSet dataSet;
+    private BarData barData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
         setViewIds();
+
+        generateChart();
 
         generateBinList();
 
@@ -102,10 +116,23 @@ public class DashboardActivity extends AppCompatActivity {
         });
     }
 
+    private void generateChart() {
+        entries = new ArrayList<>();
+        entries.add(new BarEntry(1f, 10));
+        entries.add(new BarEntry(2f, 20));
+        entries.add(new BarEntry(3f, 30));
+
+        dataSet = new BarDataSet(entries, "Test Data");
+        barData = new BarData(dataSet);
+        barChart.setData(barData);
+        barChart.invalidate();
+    }
+
     private void setViewIds() {
         ReportTextView = findViewById(R.id.reportTextView);
         reportRecyclerView = findViewById(R.id.reportRecyclerView);
         binTextView = findViewById(R.id.binTextView);
         binRecyclerView = findViewById(R.id.binRecyclerView);
+        barChart = findViewById(R.id.barChart);
     }
 }
