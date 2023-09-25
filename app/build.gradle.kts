@@ -50,6 +50,9 @@ dependencies {
     //googlemap
     implementation("com.google.android.gms:play-services-maps:18.1.0");
 
+    //MPAndroidChart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0");
+
     // Testing
 
 
