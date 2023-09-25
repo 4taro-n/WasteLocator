@@ -93,10 +93,10 @@ public class DashboardActivity extends AppCompatActivity {
             //get report object when user clicked the item
             Report clickedReport = reportList.get(position);
 
-            Intent intent = new Intent(DashboardActivity.this, HomeActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
 
-//            intent.putExtra("reportTitle", clickedReport.getTitle());
-//            intent.putExtra("reportDescription", clickedReport.getDescription());
+            intent.putExtra("reportTitle", clickedReport.getTitle());
+            intent.putExtra("reportDescription", clickedReport.getDescription());
 
             startActivity(intent);
         });

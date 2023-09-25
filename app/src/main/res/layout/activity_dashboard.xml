@@ -17,9 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Full bins"
-            android:textColor="#03A9F4"
             android:textSize="21dp"
-            android:textStyle="bold|italic" />
+             />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/binRecyclerView"
@@ -33,9 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Waste Management Feedback"
-            android:textColor="#03A9F4"
             android:textSize="21dp"
-            android:textStyle="bold|italic" />
+             />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reportRecyclerView"
