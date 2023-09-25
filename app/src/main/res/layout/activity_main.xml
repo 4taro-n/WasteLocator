@@ -15,7 +15,7 @@
         android:layout_marginHorizontal="8dp"
         android:gravity="center_vertical"
         android:text="WasteWarrior"
-        android:textColor="#03A9F4"
+        android:textColor="#0D860B"
         android:textSize="36dp"
         android:textStyle="bold|italic" />
 
@@ -34,10 +34,10 @@
             android:text="Login"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#77CBF1"
+            android:textColor="#fff"
             android:layout_marginRight="8dp"
             android:paddingHorizontal="48dp"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="#13AF10"/>
 
         <Button
             android:id="@+id/btnSignup"
@@ -46,10 +46,10 @@
             android:text="Signup"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#045F88"
+            android:textColor="#fff"
             android:layout_marginStart="8dp"
             android:paddingHorizontal="48dp"
-            android:backgroundTint="#C6CBEEF3"/>
+            android:backgroundTint="#9B4429"/>
 
     </LinearLayout>
 

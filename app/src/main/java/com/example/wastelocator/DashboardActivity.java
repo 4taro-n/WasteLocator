@@ -51,9 +51,9 @@ public class DashboardActivity extends AppCompatActivity {
     }
     private ArrayList<Bin> generateBinDummyData() {
         ArrayList<Bin> binList = new ArrayList<>();
-        binList.add(new Bin("1", "80%", "0.1", "0.2"));
-        binList.add(new Bin("1f", "80%", "0.1", "0.2"));
-        binList.add(new Bin("1", "80%", "0.1", "0.2"));
+        binList.add(new Bin("1", "100%", "0.1", "0.2"));
+        binList.add(new Bin("1f", "100%", "0.1", "0.2"));
+        binList.add(new Bin("1", "100%", "0.1", "0.2"));
 
         return binList;
     }
