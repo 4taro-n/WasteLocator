@@ -3,7 +3,6 @@ package com.example.wastelocator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.EditText;
 import android.widget.Button;
@@ -13,7 +12,6 @@ import java.util.List;
 import android.widget.ArrayAdapter;
 
 public class FeedbackActivity extends AppCompatActivity {
-    private TextView feedbackTextView;
     private ImageView feedbackImage;
     private EditText locationEditText, descriptionEditText;
     private Button photoBtn, locationBtn, sendBtn;
@@ -42,7 +40,6 @@ public class FeedbackActivity extends AppCompatActivity {
     }
 
     private void setViewIds() {
-        feedbackTextView = findViewById(R.id.feedbackTextView);
         feedbackImage = findViewById(R.id.feedbackImage);
         locationEditText = findViewById(R.id.locationEditText);
         descriptionEditText  = findViewById(R.id.descriptionEditText);

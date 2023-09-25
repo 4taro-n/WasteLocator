@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wastelocator.DB.Event;
-import com.example.wastelocator.DB.Feedback;
-import com.example.wastelocator.DB.FeedbackDao;
+import com.example.wastelocator.DB.EventFeedback;
+import com.example.wastelocator.DB.EventFeedbackDao;
 import com.example.wastelocator.Utils.MyApp;
 
 import java.util.concurrent.ExecutorService;
@@ -22,7 +22,7 @@ public class EventFeedbackActivity extends AppCompatActivity {
     private EditText comments;
     private Button submitBtn;
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private FeedbackDao feedbackDao;
+    private EventFeedbackDao eventFeedbackDao;
     private Event eventToLink;
 
     @Override
@@ -43,7 +43,7 @@ public class EventFeedbackActivity extends AppCompatActivity {
     }
 
     private void doaInitialising() {
-        feedbackDao = MyApp.getAppDatabase().feedbackDao();
+        eventFeedbackDao = MyApp.getAppDatabase().feedbackDao();
     }
 
     private void initialisingEventToLink() {
@@ -62,15 +62,15 @@ public class EventFeedbackActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
             } else {
                 // Create a feedback object
-                Feedback feedback = new Feedback(rating, feedbackComment);
+                EventFeedback eventFeedback = new EventFeedback(rating, feedbackComment);
 
                 // Linking the feedback to the event
                 if (eventToLink != null) {
-                    feedback.setEventID(eventToLink.eventID);
+                    eventFeedback.setEventID(eventToLink.eventID);
                 }
 
                 executorService.execute(() -> {
-                    feedbackDao.insert(feedback);
+                    eventFeedbackDao.insert(eventFeedback);
                     runOnUiThread(() -> Toast.makeText(this, "Thank you for your feedback", Toast.LENGTH_SHORT).show());
                 });
                 finish();
