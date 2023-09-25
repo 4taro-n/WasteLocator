@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map_fragment_2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/map_fragment_2"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Latitude:"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/latitude_editText"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="16dp"
+                android:layout_height="50dp"
+                android:hint="Latitude"
+                android:background="@drawable/custom_input"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Longitude:"
+                android:layout_marginEnd="16dp"/>
+            <EditText
+                android:id="@+id/longitude_editText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/custom_input"
+                android:hint="Longitude"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <Button
+                android:id="@+id/submit_lat_long_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Submit"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

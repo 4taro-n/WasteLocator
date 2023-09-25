@@ -8,23 +8,15 @@
     android:padding="16dp"
     tools:context=".HomeActivity">
 
-    <!-- Report Waste Text -->
-    <TextView
-        android:id="@+id/feedbackTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Report Waste"
-        android:textSize="25sp"
-         />
-
     <!-- Feedback Image -->
 
     <ImageView
         android:id="@+id/feedbackImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/baseline_image_24"/>
+        android:src="@drawable/baseline_image_24"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -43,14 +35,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
         <EditText
             android:id="@+id/locationEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:hint="Location" />
+            android:paddingStart="8dp"
+            android:hint="Location"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_input"/>
 
         <Button
             android:id="@+id/locationBtn"
@@ -64,17 +60,22 @@
     <Spinner
         android:id="@+id/titleSpinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:background="@drawable/custom_spinner_background"/>
 
     <!-- Description -->
     <EditText
         android:id="@+id/descriptionEditText"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="Description" />
+        android:layout_height="150dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:gravity="top"
+        android:layout_marginTop="16dp"
+        android:hint="Description"
+        android:background="@drawable/custom_input"/>
 
 
     <RelativeLayout

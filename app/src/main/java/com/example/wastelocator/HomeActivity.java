@@ -13,7 +13,6 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-//    private Button btnGoToContactUs, btnGoToDashboard;
     private CardView nearbyBinsCard, notificationsCard, eventsCard;
     private CardView feedbackCard, contactUsCard, dashboardCard;
 
@@ -60,13 +59,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        btnGoToDashboard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(HomeActivity.this, DashboardActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         dashboardCard.setOnClickListener(new View.OnClickListener() {
             @Override

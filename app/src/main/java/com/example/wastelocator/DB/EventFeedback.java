@@ -5,21 +5,21 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-@Entity(tableName = "feedback",
+@Entity(tableName = "event_feedback",
         foreignKeys = @ForeignKey(
                 entity = Event.class,
                 parentColumns = "eventID",
                 childColumns = "eventID",
                 onDelete = ForeignKey.CASCADE
         ))
-public class Feedback implements Serializable {
+public class EventFeedback implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public int feedbackID;
     private float rating;
     private String comments;
     private int eventID; // Links a feedback to an event
 
-    public Feedback(float rating, String comments) {
+    public EventFeedback(float rating, String comments) {
         this.rating = rating;
         this.comments = comments;
     }
