@@ -49,7 +49,7 @@ dependencies {
     //googlemap
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
-    //id (com.google.android.libraries.mapsplatform.secrets-gradle-plugin)
+    implementation("com.google.maps.android:android-maps-utils:3.4.0")
 
     //MPAndroidChart
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0");

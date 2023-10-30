@@ -53,10 +53,10 @@ public class NewBinActivity extends AppCompatActivity implements OnMapReadyCallb
         latitudeET = findViewById(R.id.latitude_editText);
         longitudeET = findViewById(R.id.longitude_editText);
         submitBtn = findViewById(R.id.submit_lat_long_btn);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
     }
 
     private void initialisingGoogleMap() {
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment_2);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);

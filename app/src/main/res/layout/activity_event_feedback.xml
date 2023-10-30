@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="We value your eventFeedback"
+        android:text="We value your feedback"
         android:textStyle="bold"
         android:textSize="25sp"/>
 

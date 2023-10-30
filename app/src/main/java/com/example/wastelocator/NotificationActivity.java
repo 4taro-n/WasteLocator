@@ -33,7 +33,7 @@ public class NotificationActivity extends AppCompatActivity {
         reportAdapter.setOnItemClickListener(position -> {
             // Handle recyclerview item click here
             // For example, you can open a new activity
-            Toast.makeText(NotificationActivity.this, reportList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(NotificationActivity.this, reportList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
 
             //get report object when user clicked the item
             Report clickedReport = reportList.get(position);
@@ -50,16 +50,15 @@ public class NotificationActivity extends AppCompatActivity {
     // Replace this method with your actual vehicle data
     private ArrayList<Report> generateDummyData() {
         ArrayList<Report> reportList = new ArrayList<>();
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-        reportList.add(new Report("Bin Location Accuracy", "test"));
-
+        reportList.add(new Report("Begin with the basics: Waste Segregation", "Description"));
+        reportList.add(new Report("Reduce Singe-Use Plastic", "Description"));
+        reportList.add(new Report("Proper Disposal of Hazardous Waste", "Description"));
+        reportList.add(new Report("Begin with the basics: Waste Segregation", "Description"));
+        reportList.add(new Report("Reduce Singe-Use Plastic", "Description"));
+        reportList.add(new Report("Proper Disposal of Hazardous Waste", "Description"));
+        reportList.add(new Report("Begin with the basics: Waste Segregation", "Description"));
+        reportList.add(new Report("Reduce Singe-Use Plastic", "Description"));
+        reportList.add(new Report("Proper Disposal of Hazardous Waste", "Description"));
 
         // Add more vehicles as needed
         return reportList;

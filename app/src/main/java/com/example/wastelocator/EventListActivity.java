@@ -92,7 +92,7 @@ public class EventListActivity extends AppCompatActivity {
                 eventArrayList.addAll(events);
                 eventAdapter.notifyDataSetChanged();
             } else {
-                Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
                 emptyStateImage.setVisibility(View.VISIBLE);
                 eventAdapter.notifyDataSetChanged();
             }

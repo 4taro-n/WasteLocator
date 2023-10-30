@@ -20,6 +20,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:text="Add Bin" />
+        android:text="Start" />
 
 </RelativeLayout>
