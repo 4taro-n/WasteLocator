@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wastelocator.DB.EventDao;
 import com.example.wastelocator.DB.EventWithVolunteers;
 import com.example.wastelocator.DB.Volunteer;
+import com.example.wastelocator.EventActivity.VolunteerAdapter;
+import com.example.wastelocator.R;
 import com.example.wastelocator.Utils.MyApp;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wastelocator.DB.Event;
 import com.example.wastelocator.DB.EventDao;
+import com.example.wastelocator.R;
 import com.example.wastelocator.Utils.MyApp;
 
 import java.io.File;

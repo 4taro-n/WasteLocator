@@ -46,13 +46,19 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.11.0") //  load the image from its Uri into the ImageView.
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
-    //googlemap
+    //Google Map
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation("com.google.maps.android:android-maps-utils:3.4.0")
 
+    // Volley HTTP
+    implementation("com.android.volley:volley:1.2.1")
+
+    // OkHttp3
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+
     //MPAndroidChart
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0");
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

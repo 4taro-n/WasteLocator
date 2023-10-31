@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wastelocator.DB.Volunteer;
+import com.example.wastelocator.R;
 
 import java.util.ArrayList;
 

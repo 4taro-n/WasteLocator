@@ -1,9 +1,8 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wastelocator.DB.Event;
 import com.example.wastelocator.DB.EventDao;
-import com.example.wastelocator.DB.Volunteer;
+import com.example.wastelocator.R;
 import com.example.wastelocator.Utils.MyApp;
 import com.example.wastelocator.Utils.SharedPrefManager;
 

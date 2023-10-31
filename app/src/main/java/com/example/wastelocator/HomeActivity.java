@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 
+import com.example.wastelocator.BinActivity.NearByBinActivity;
+import com.example.wastelocator.EventActivity.EventListActivity;
 import com.example.wastelocator.Utils.SharedPrefManager;
-import android.widget.Button;
 
 
 public class HomeActivity extends AppCompatActivity {

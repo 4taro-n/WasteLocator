@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.BinActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.wastelocator.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -87,6 +88,9 @@ public class NewBinActivity extends AppCompatActivity implements OnMapReadyCallb
     private void zoomedCurrentLocation() {
         if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
                 checkSelfPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            // blue point
+            mMap.setMyLocationEnabled(true);
 
             Task<Location> locationResult = fusedLocationProviderClient.getLastLocation();
             locationResult.addOnCompleteListener(this, task -> {

@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.wastelocator.DB.Event;
 import com.example.wastelocator.DB.Volunteer;
 import com.example.wastelocator.DB.VolunteerDao;
+import com.example.wastelocator.R;
 import com.example.wastelocator.Utils.MyApp;
 
 import java.util.concurrent.ExecutorService;

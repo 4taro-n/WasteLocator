@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 
 import android.net.Uri;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.wastelocator.DB.Event;
+import com.example.wastelocator.R;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

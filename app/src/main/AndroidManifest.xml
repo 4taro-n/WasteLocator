@@ -4,7 +4,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--Internet permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:name=".Utils.MyApp"
@@ -17,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WasteWarrior"
         tools:targetApi="31"
-        android:enableOnBackInvokedCallback="true">
+        android:enableOnBackInvokedCallback="true"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".FeedbackReceivedActivity"
             android:exported="false" />
@@ -30,7 +34,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBCQqutNZrw5PfoxrbxWJuxrLt2_jJTPjo" />
+            android:value="YOUR_GOOGLE_KRY" />
 <!--        ${MAPS_API_KEY}-->
         <activity
             android:name=".MapActivity"
@@ -60,27 +64,27 @@
             android:label="Feedback"
             android:exported="false" />
         <activity
-            android:name=".EventListActivity"
+            android:name=".EventActivity.EventListActivity"
             android:label="Events"
             android:exported="false" />
         <activity
-            android:name=".NewEventActivity"
+            android:name=".EventActivity.NewEventActivity"
             android:label="New Event"
             android:exported="false" />
         <activity
-            android:name=".EventDetailsActivity"
+            android:name=".EventActivity.EventDetailsActivity"
             android:label="Event Details"
             android:exported="false" />
         <activity
-            android:name=".VolunteerListActivity"
+            android:name=".EventActivity.VolunteerListActivity"
             android:label="Volunteers"
             android:exported="false" />
         <activity
-            android:name=".EventRegistrationActivity"
+            android:name=".EventActivity.EventRegistrationActivity"
             android:label="Event Registration"
             android:exported="false" />
         <activity
-            android:name=".EventFeedbackActivity"
+            android:name=".EventActivity.EventFeedbackActivity"
             android:label="Feedback"
             android:exported="false" />
         <activity
@@ -88,11 +92,11 @@
             android:label="Notifications"
             android:exported="false" />
         <activity
-            android:name=".NearByBinActivity"
+            android:name=".BinActivity.NearByBinActivity"
             android:label="Nearby Bins"
             android:exported="false" />
         <activity
-            android:name=".NewBinActivity"
+            android:name=".BinActivity.NewBinActivity"
             android:label="New Bins"
             android:exported="false" />
         <activity

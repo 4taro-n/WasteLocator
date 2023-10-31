@@ -1,4 +1,4 @@
-package com.example.wastelocator;
+package com.example.wastelocator.EventActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.wastelocator.DB.Event;
 import com.example.wastelocator.DB.EventFeedback;
 import com.example.wastelocator.DB.EventFeedbackDao;
+import com.example.wastelocator.R;
 import com.example.wastelocator.Utils.MyApp;
 
 import java.util.concurrent.ExecutorService;

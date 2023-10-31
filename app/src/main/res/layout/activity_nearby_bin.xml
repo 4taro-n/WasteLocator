@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NearByBinActivity">
+    tools:context=".BinActivity.NearByBinActivity">
 
         <fragment
             android:id="@+id/map_fragment"
@@ -18,10 +18,10 @@
             android:id="@+id/report_waste_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_alignParentEnd="true"
-            android:text="Report Waste" />
+            android:text="Report Waste"
+            android:textAllCaps="false"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,17 +31,27 @@
             android:gravity="center">
 
                 <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
+                <Button
                     android:id="@+id/find_nearby_bin_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="Find nearby Bin" />
+                    android:text="Find Nearby Bin"
+                    android:textAllCaps="false"/>
 
-                <Button
-                    android:id="@+id/add_bin_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add Bin" />
+<!--                <Button-->
+<!--                    android:id="@+id/add_bin_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Add Bin"-->
+<!--                    android:textAllCaps="false"/>-->
         </LinearLayout>
 
 
