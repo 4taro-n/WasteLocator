@@ -18,12 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        if (SharedPrefManager.isLoggedIn()) {
-//            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//            startActivity(intent);
-//        } else {
         setContentView(R.layout.activity_main);
-        //Linking the views
         setViewIds();
 
         //Setting Click listeners

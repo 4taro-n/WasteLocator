@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_margin="16dp">
 
         <!-- ImageView for the icon -->
         <ImageView
@@ -22,7 +22,7 @@
             android:contentDescription="bin image" />
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID:"
+                android:text="ID:  "
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -40,24 +40,27 @@
                 android:id="@+id/binId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="binid"
+                android:text="binID"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginRight="30dp"/>
+                android:paddingEnd="50dp"/>
 
             <TextView
                 android:id="@+id/binVolume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="binvolume"
+                android:text="bin_volume"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
+
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/baseline_arrow_right_24"
             android:contentDescription="bin image" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

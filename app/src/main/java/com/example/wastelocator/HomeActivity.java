@@ -8,7 +8,8 @@ import android.view.View;
 import android.content.Intent;
 
 import com.example.wastelocator.BinActivity.NearByBinActivity;
-import com.example.wastelocator.EventActivity.EventListActivity;
+import com.example.wastelocator.Dashboard.DashboardActivity;
+import com.example.wastelocator.Event.EventListActivity;
 import com.example.wastelocator.Utils.SharedPrefManager;
 
 

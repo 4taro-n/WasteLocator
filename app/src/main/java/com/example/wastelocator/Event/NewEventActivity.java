@@ -1,4 +1,4 @@
-package com.example.wastelocator.EventActivity;
+package com.example.wastelocator.Event;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -28,7 +28,6 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeParseException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

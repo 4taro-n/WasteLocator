@@ -51,8 +51,8 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
     private Button addBinBtn, reportWastBtn, findBinBtn, cancelBtn;
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationProviderClient;
-    private List<LatLng> markerLocations = new ArrayList<>();
-    private static final double RADIUS = 0.03; // 3 km
+    private ArrayList<LatLng> markerLocations = new ArrayList<>();
+    //private static final double RADIUS = 0.03; // 3 km
     private LatLng userCurrentLocation;
 
 
@@ -67,7 +67,6 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
 
     }
 
-
     private void bindingViews() {
         //addBinBtn = findViewById(R.id.add_bin_btn);
         findBinBtn = findViewById(R.id.find_nearby_bin_btn);
@@ -77,7 +76,7 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
 
     private void initialisingGoogleMap() {
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment_nearbyBin);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
@@ -222,7 +221,7 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
 
     // get the route from the Google Directions API
     private void getRouteToMarker(LatLng destination) {
-        String apiKey = "YOUR_GOOGLE_KRY";
+        String apiKey = "YOUR_GOOGLE_KEY";
         LatLng origin = userCurrentLocation;
 
         String url = "https://maps.googleapis.com/maps/api/directions/json?" +

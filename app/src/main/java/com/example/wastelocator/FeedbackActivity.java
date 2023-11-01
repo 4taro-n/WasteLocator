@@ -29,9 +29,9 @@ public class FeedbackActivity extends AppCompatActivity {
     private void setTitleSpinner() {
         List<String> categories = new ArrayList<>();
         categories.add("Bin Location Accuracy");
-        categories.add("Bin Fill Level Accracy");
+        categories.add("Bin Fill Level Accuracy");
         categories.add("Suggestion for New Features");
-        categories.add("Reproting technical Issues");
+        categories.add("Reporting technical Issues");
         categories.add("General Feedback");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);

@@ -1,4 +1,4 @@
-package com.example.wastelocator.EventActivity;
+package com.example.wastelocator.Event;
 
 import android.view.LayoutInflater;
 import android.view.View;

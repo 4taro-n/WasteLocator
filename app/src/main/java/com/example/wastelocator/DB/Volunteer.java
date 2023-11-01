@@ -2,6 +2,7 @@ package com.example.wastelocator.DB;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -12,7 +13,7 @@ import java.io.Serializable;
             parentColumns = "eventID",
             childColumns = "eventID",
             onDelete = ForeignKey.CASCADE
-    ))
+    ), indices = {@Index("eventID")})
 public class Volunteer implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public int volunteerID;

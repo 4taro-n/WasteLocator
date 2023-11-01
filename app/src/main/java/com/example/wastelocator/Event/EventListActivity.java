@@ -1,4 +1,4 @@
-package com.example.wastelocator.EventActivity;
+package com.example.wastelocator.Event;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;

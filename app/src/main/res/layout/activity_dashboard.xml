@@ -8,24 +8,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/barChart"
-            android:layout_width="279dp"
-            android:layout_height="250dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_weight="0.8"
-            android:layout_margin="50dp"
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <com.anychart.AnyChartView
+            android:id="@+id/barChartView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"/>
+
 
         <TextView
             android:id="@+id/binTextView"
@@ -34,26 +40,26 @@
             android:layout_gravity="center"
             android:text="Full bins"
             android:textSize="21dp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/binRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <TextView
-            android:id="@+id/reportTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Waste Management Feedback"
-            android:textSize="21dp"
-            android:layout_marginTop="16dp"
-            android:textStyle="bold|italic" />
+<!--        <TextView-->
+<!--            android:id="@+id/reportTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="Waste Management Feedback"-->
+<!--            android:textSize="21dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:textStyle="bold" />-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reportRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/reportRecyclerView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
     </LinearLayout>
 </ScrollView>

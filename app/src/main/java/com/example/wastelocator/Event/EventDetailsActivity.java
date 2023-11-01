@@ -1,4 +1,4 @@
-package com.example.wastelocator.EventActivity;
+package com.example.wastelocator.Event;
 
 import android.content.Intent;
 import android.net.Uri;

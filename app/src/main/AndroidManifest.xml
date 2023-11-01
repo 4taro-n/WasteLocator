@@ -34,10 +34,10 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_GOOGLE_KRY" />
+            android:value="YOUR_GOOGLE_KEY" />
 <!--        ${MAPS_API_KEY}-->
         <activity
-            android:name=".MapActivity"
+            android:name=".Dashboard.MapActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".Dashboard.DashboardActivity"
             android:label="Dashboard"
             android:exported="false" />
         <activity
@@ -64,27 +64,27 @@
             android:label="Feedback"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.EventListActivity"
+            android:name=".Event.EventListActivity"
             android:label="Events"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.NewEventActivity"
+            android:name=".Event.NewEventActivity"
             android:label="New Event"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.EventDetailsActivity"
+            android:name=".Event.EventDetailsActivity"
             android:label="Event Details"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.VolunteerListActivity"
+            android:name=".Event.VolunteerListActivity"
             android:label="Volunteers"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.EventRegistrationActivity"
+            android:name=".Event.EventRegistrationActivity"
             android:label="Event Registration"
             android:exported="false" />
         <activity
-            android:name=".EventActivity.EventFeedbackActivity"
+            android:name=".Event.EventFeedbackActivity"
             android:label="Feedback"
             android:exported="false" />
         <activity

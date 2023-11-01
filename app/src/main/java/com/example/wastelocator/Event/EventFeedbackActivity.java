@@ -1,4 +1,4 @@
-package com.example.wastelocator.EventActivity;
+package com.example.wastelocator.Event;
 
 import android.os.Bundle;
 import android.widget.Button;
