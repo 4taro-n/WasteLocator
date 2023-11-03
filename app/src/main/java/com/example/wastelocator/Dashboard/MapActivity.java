@@ -113,7 +113,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             return;
         }
 
-        String apiKey = "YOUR_GOOGLE_KEY";
+        String apiKey = "AIzaSyA96EjtC0kzDW2WVSCrzOPqd6U5QxHtOqE";
         LatLng origin = userCurrentLocation;
 
         String url = "https://maps.googleapis.com/maps/api/directions/json?" +

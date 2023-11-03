@@ -41,7 +41,7 @@ public class BinAdapter extends RecyclerView.Adapter<BinAdapter.BinViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull BinViewHolder holder, int position) {
         Bin bin = binList.get(position);
-        holder.binId.setText(String.valueOf(bin.getId()));
+        holder.binId.setText(String.valueOf(bin.getBinId()));
         holder.binVolume.setText(String.valueOf(bin.getFillLevel()) + "%");
     }
 

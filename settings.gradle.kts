@@ -15,6 +15,7 @@
 //
 //rootProject.name = "WasteLocator"
 //include(":app")
+
 pluginManagement {
     repositories {
         google()
@@ -29,7 +30,11 @@ dependencyResolutionManagement {
         mavenCentral()
         maven(url = "https://jitpack.io")
     }
+
 }
+
+
+
 
 rootProject.name = "WasteLocator"
 include(":app")

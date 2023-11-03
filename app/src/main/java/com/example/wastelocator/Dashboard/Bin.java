@@ -13,7 +13,7 @@ public class Bin {
         this.fillLevel = fillLevel;
     }
 
-    public int getId() {
+    public int getBinId() {
         return id;
     }
 

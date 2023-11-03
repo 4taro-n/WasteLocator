@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,10 +23,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.wastelocator.FeedbackActivity;
 import com.example.wastelocator.R;
+import com.example.wastelocator.UserLocation;
 import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -45,14 +44,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import java.util.Date;
 import java.util.List;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+
 public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private Button addBinBtn, reportWastBtn, findBinBtn, cancelBtn;
+    private Button reportWastBtn, findBinBtn, cancelBtn;
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private ArrayList<LatLng> markerLocations = new ArrayList<>();
-    //private static final double RADIUS = 0.03; // 3 km
     private LatLng userCurrentLocation;
 
 
@@ -68,7 +71,6 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
     }
 
     private void bindingViews() {
-        //addBinBtn = findViewById(R.id.add_bin_btn);
         findBinBtn = findViewById(R.id.find_nearby_bin_btn);
         reportWastBtn = findViewById(R.id.report_waste_btn);
         cancelBtn = findViewById(R.id.cancel_btn);
@@ -83,10 +85,6 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
     }
 
     private void onClickListener() {
-//        addBinBtn.setOnClickListener(view -> {
-//            Intent intent = new Intent(this, NewBinActivity.class);
-//            startActivity(intent);
-//        });
 
         findBinBtn.setOnClickListener(view -> {
             findBinBtn.setVisibility(View.GONE);
@@ -114,36 +112,13 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
                     mMap.animateCamera(cameraUpdate, 1000, null); // 1000 ms duration
                 }
             }
-
-
         });
-
     }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         zoomedCurrentLocation();
-    }
-
-    // Update the camera position as the user move
-    private final LocationCallback locationCallback = new LocationCallback() {
-        @Override
-        public void onLocationResult(@NonNull LocationResult locationResult) {
-            if (locationResult == null) {
-                return;
-            }
-            for (Location location : locationResult.getLocations()) {
-                LatLng newLocation = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newLocation, 15));
-            }
-        }
-    };
-
-    private void requestLocationUpdate() {
-        LocationRequest locationRequest = new LocationRequest();
-
-
     }
 
     private void zoomedCurrentLocation() {
@@ -166,15 +141,6 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
                        userCurrentLocation = currentLatLng; // save current location
                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 13));
 
-                       // add random markers around current location
-                       /*
-                       for (int i = 0; i < 10; i++) {
-                           double randomLatitude = currentLatitude + (Math.random() * 2 * RADIUS) - RADIUS;
-                           double randomLongitude = currentLongitude + (Math.random() * 2 * RADIUS) - RADIUS;
-
-                           markerLocations.add(new LatLng(randomLatitude, randomLongitude));
-                       }
-                       addMarkers();*/
 
                        fetchBinLocations(); // add bins on the map
 
@@ -187,12 +153,6 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1001);
         }
     }
-
-//    private void addMarkers() {
-//        for (LatLng location : markerLocations) {
-//            mMap.addMarker(new MarkerOptions().position(location));
-//        }
-//    }
 
     private void navigateToNearestBin() {
         if (mMap == null || userCurrentLocation == null || markerLocations.isEmpty()) {
@@ -306,4 +266,14 @@ public class NearByBinActivity extends AppCompatActivity implements OnMapReadyCa
 
     }
 
+
 }
+
+
+
+
+
+
+
+
+
